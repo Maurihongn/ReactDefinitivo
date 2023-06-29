@@ -6,8 +6,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import {
+  ArticuloPage,
   ArticulosPage,
+  BusquedaPage,
   CrearPage,
+  EditarPage,
   Footer,
   Header,
   InicioPage,
@@ -28,6 +31,17 @@ export const BlogRoutes = () => {
           <Route path="/" element={<InicioPage />} />
           <Route path="/articles" element={<ArticulosPage />} />
           <Route path="/create" element={<CrearPage />} />
+          <Route path="/buscar/:busqueda" element={<BusquedaPage />} />
+          <Route path="/article/:id" element={<ArticuloPage />} />
+          <Route path="/edit/:id" element={<EditarPage />} />
+          <Route
+            path="*"
+            element={
+              <div className="jumbo">
+                <h1>Error 404</h1>
+              </div>
+            }
+          />
         </Routes>
       </section>
       <Sidebar />

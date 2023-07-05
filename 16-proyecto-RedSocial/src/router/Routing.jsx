@@ -14,6 +14,7 @@ export const Routing = () => {
           <Route index element={<Feed />} />
           <Route path="feed" element={<Feed />} />
         </Route>
+        <Route path="*" element={<h1>Error 404</h1>} />
       </Routes>
     </BrowserRouter>
   );
